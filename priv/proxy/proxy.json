@@ -48,6 +48,42 @@
             "path": "/is/users/{id}",
             "method": "PUT",
             "not_secured": false
+          },
+          {
+            "id": "get-no-auth",
+            "path": "/is/get-no-auth",
+            "method": "GET",
+            "not_secured": true
+          },
+          {
+            "id": "get-with-auth",
+            "path": "/is/get-with-auth",
+            "method": "GET",
+            "not_secured": false
+          },
+          {
+            "id": "post-no-auth",
+            "path": "/is/post-no-auth",
+            "method": "POST",
+            "not_secured": true
+          },
+          {
+            "id": "post-with-auth",
+            "path": "/is/post-with-auth",
+            "method": "POST",
+            "not_secured": false
+          },
+          {
+            "id": "produce-kafka",
+            "path": "/is/produce-kafka/{id}",
+            "method": "GET",
+            "not_secured": true
+          },
+          {
+            "id": "produce-kafka-load",
+            "path": "/is/produce-kafka-load/{id}/{id}",
+            "method": "GET",
+            "not_secured": true
           }
         ]
       }

@@ -113,7 +113,7 @@ defmodule Gateway.ApiProxy.Router do
 
   @spec forward_request(Proxy.endpoint, Proxy.api_definition, %Plug.Conn{}) :: %Plug.Conn{}
   defp forward_request(endpoint, api, conn) do
-    log_to_kafka(api, endpoint, conn)
+    # log_to_kafka(api, endpoint, conn)
     %{
       method: method,
       request_path: request_path,

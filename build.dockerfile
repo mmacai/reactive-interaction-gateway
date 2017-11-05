@@ -22,5 +22,7 @@ COPY priv /opt/sites/fsa-reactive-gateway/priv
 
 # Initialize release & compile application
 RUN mix release.init
+COPY vm.args /opt/sites/fsa-reactive-gateway/rel
+COPY config.exs /opt/sites/fsa-reactive-gateway/rel
 # Release application production code
 CMD ["mix", "release"]
