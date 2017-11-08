@@ -10,7 +10,9 @@ defmodule GatewayWeb.Presence.Socket do
   channel "role:*", GatewayWeb.Presence.Channel
 
   ## Transports
-  transport :websocket, Phoenix.Transports.WebSocket
+  transport :websocket, Phoenix.Transports.WebSocket,
+    timeout: :infinity,
+    transport_log: false
   transport :longpoll, Phoenix.Transports.LongPoll
   transport :sse, Gateway.Transports.ServerSentEvents
 

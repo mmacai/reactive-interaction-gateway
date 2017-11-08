@@ -71,6 +71,7 @@ defmodule Gateway.Mixfile do
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:floki, "~> 0.18.1", runtime: false},  # HTML parser
       {:confex, "~> 3.3"},  # Read and use application configuration from environment variables
+      {:observer_cli, "~> 1.1.0"},
     ]
   end
 

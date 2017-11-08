@@ -25,9 +25,9 @@ config :gateway, GatewayWeb.Endpoint,
   ],
   http: [
     port: {:system, :integer, "PORT", 4000},
-    acceptors: 20_000,
-    max_connections: 50_000,
-    protocol_options: [max_keepalive: 100_000]
+    acceptors: 100, # less is better, had 10_000 before
+    max_connections: :infinity, # had 100_000 before
+    protocol_options: [max_keepalive: 100] # had 100_000 before
   ],
   render_errors: [view: GatewayWeb.ErrorView, accepts: ~w(html json xml)],
   pubsub: [name: Gateway.PubSub, adapter: Phoenix.PubSub.PG2]

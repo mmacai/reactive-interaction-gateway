@@ -16,7 +16,7 @@ config :gateway, GatewayWeb.Endpoint,
   check_origin: false
 
 # Do not print debug messages in production
-config :logger, level: :warn
+config :logger, level: :debug
 
 # ## Using releases
 #
