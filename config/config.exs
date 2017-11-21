@@ -14,7 +14,6 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:module, :request_id]
 
-
 # --------------------------------------
 # Phoenix
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -25,9 +24,7 @@ config :gateway, GatewayWeb.Endpoint,
   ],
   http: [
     port: {:system, :integer, "PORT", 4000},
-    acceptors: 100, # less is better, had 10_000 before
-    max_connections: :infinity, # had 100_000 before
-    protocol_options: [max_keepalive: 100] # had 100_000 before
+    max_connections: :infinity
   ],
   render_errors: [view: GatewayWeb.ErrorView, accepts: ~w(html json xml)],
   pubsub: [name: Gateway.PubSub, adapter: Phoenix.PubSub.PG2]
